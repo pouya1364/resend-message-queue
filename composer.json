@@ -10,7 +10,7 @@
             "role": "Developer"
         }
     ],
-    "name": "resend-message-queue/sqs-queue",
+    "name": "resend-message-queue/sqs-dl-queue",
     "description": "Resend messages in dead letter queues to the main queue in AWS SQS",
     "keywords": ["AWS","SQS", "deadletter queue", "resend", "message", "queue", "sqs-queue", "resend-message-queue"],
     "homepage": "https://github.com/pouya1364/resend-message-queue",
