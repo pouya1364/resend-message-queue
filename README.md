@@ -18,6 +18,7 @@ In some scenario, the message could not consume for any error and after fixing t
           AWS_VERSION=latest
           AWS_ENDPOINT=https://sqs.eu-central-1.amazonaws.com
           
-* ### Command
- ``` bin/console app:resend-dl-messages MAIN-QUEUe-NAME```
-
+### Command
+ ``` bin/console app:resend-dl-messages MAIN-QUEUE-NAME```
+### Sample
+ ``` bin/console app:resend-dl-messages my-queue```
