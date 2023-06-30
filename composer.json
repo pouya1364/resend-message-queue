@@ -1,8 +1,19 @@
 {
-    "type": "project",
-    "license": "proprietary",
+    "type": "library",
+    "license": "MIT",
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Pouya Amani",
+            "email": "pouya1364@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "name": "resend-message-queue/sqs-queue",
+    "description": "Resend messages in dead letter queues to the main queue in AWS SQS",
+    "keywords": ["AWS","SQS", "deadletter queue", "resend", "message", "queue", "sqs-queue", "resend-message-queue"],
+    "homepage": "https://github.com/pouya1364/resend-message-queue",
     "require": {
         "php": ">=8.1",
         "ext-ctype": "*",
