@@ -130,8 +130,9 @@ class QueueService
         } catch (\Exception $e) {
             throw new \RuntimeException(
                 sprintf('Could not get queue url for queue "%s"', $queueName),
-            0,
-                $e->getMessage());
+                $e->getCode(),
+                $e
+                );
         }
     }
 
