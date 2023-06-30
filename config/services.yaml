@@ -6,7 +6,6 @@
 parameters:
 
 services:
-    # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
@@ -20,5 +19,16 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+
+    Aws\Sqs\SqsClient:
+        - region: '%env(AWS_REGION)%'
+          version: '%env(AWS_VERSION)%'
+          credentials:
+            key: '%env(AWS_ACCESS_KEY_ID)%'
+            secret: '%env(AWS_SECRET_ACCESS_KEY)%'
+          endpoint: '%env(AWS_ENDPOINT)%'
+
+    App\AWS\QueueService:
+        arguments:
+            $client: '@Aws\Sqs\SqsClient'
+
