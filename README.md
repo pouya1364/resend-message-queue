@@ -10,6 +10,14 @@ In some scenario, the message could not consume for any error and after fixing t
 #### Install
 * you need to install PHP and composer in your Docker, VM,pc and etc...
 * You need to run ```composer install``` to install packages
-
+* You need to set the below variables in ```.env``` file:
+          
+          AWS_ACCESS_KEY_ID=yourkey
+          AWS_SECRET_ACCESS_KEY=yoursecret
+          AWS_REGION=eu-central-1
+          AWS_VERSION=latest
+          AWS_ENDPOINT=https://sqs.eu-central-1.amazonaws.com
+          
 * ### Command
  ``` bin/console app:resend-dl-messages MAIN-QUEUe-NAME```
+
