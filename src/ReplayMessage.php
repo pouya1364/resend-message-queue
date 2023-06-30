@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App;
+namespace Rmq;
 
-use App\AWS\QueueService;
+use Rmq\AWS\QueueService;
 
 class ReplayMessage
 {

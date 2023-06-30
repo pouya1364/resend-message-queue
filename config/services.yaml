@@ -12,7 +12,7 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
-    App\:
+    Rmq\:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
@@ -28,7 +28,7 @@ services:
             secret: '%env(AWS_SECRET_ACCESS_KEY)%'
           endpoint: '%env(AWS_ENDPOINT)%'
 
-    App\AWS\QueueService:
+    Rmq\AWS\QueueService:
         arguments:
             $client: '@Aws\Sqs\SqsClient'
 
